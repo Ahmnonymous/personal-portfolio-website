@@ -1,3 +1,55 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+
+require './PHPMailer/src/Exception.php';
+require './PHPMailer/src/PHPMailer.php';
+require './PHPMailer/src/SMTP.php';
+//require 'main-config.php';
+require 'local-config.php';
+
+// Create a new PHPMailer instance
+$mail = new PHPMailer();
+
+// Enable SMTP debugging (optional)
+$mail->SMTPDebug = SMTP::DEBUG_OFF;
+
+// Set the SMTP options
+$mail->isSMTP();
+$mail->Host = SMTP_HOST;
+$mail->Port = SMTP_PORT;
+$mail->SMTPAuth = SMTP_AUTH;
+$mail->SMTPAutoTLS = SMTP_AUTO_TLS;
+$mail->SMTPSecure = SMTP_SECURE;
+$mail->Username = SMTP_USERNAME;
+$mail->Password = SMTP_PASSWORD;
+
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email =$_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    
+    // Send email to the default recipient
+    $defaultEmail = 'a4medqureshi8@gmail.com';
+    $mail->addAddress($defaultEmail, 'Ahmed Raza');
+    $mail->Subject = 'Message from Ahmnonymous.netlify.app';
+    $mail->Body  = 'Name: ' . $name . "\n";
+    $mail->Body .= 'Email: ' . $email . "\n";
+    $mail->Body .= 'Subject: ' . $subject . "\n";
+    $mail->Body .= 'Message: ' . $message . "\n";
+    
+    // Send the email to the default recipient
+    if ($mail->send()) {
+        $messages[] = 'Email sent successfully.';
+    } else {
+        $messages[] = 'Email not sent successfully.';
+    }
+}
+    
+?>
+
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -762,34 +814,39 @@
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/a4medqureshi8@gmail.com" method="POST" class="contact__form grid">
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" class="contact__form grid">
+                <?php
+                    if (isset($message)) {
+                        foreach ($messages as $msg) {
+                            echo '<p class="message">' . $msg . '</p>';
+                        }
+                    }
+                ?>
+
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" name="name" class="contact__input" required>
+                            <input type="text" name="name" id="name" class="contact__input" required>
                         </div>
 
                         <div class="contact__content">
                             <label for="" class="contact__label">E-mail</label>
-                            <input type="email" name="email" class="contact__input" required>
+                            <input type="email" name="email" id="email" class="contact__input" required>
                         </div>
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Subject</label>
-                        <input type="text" name="_subject" class="contact__input" required>
+                        <input type="text" name="subject" id="subject" class="contact__input" required>
                     </div>
 
                     <div class="contact__content">
                         <label for="" class="contact__label">Description</label>
-                        <textarea name="message" cols="0" rows="7" class="contact__input" required></textarea>
+                        <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
                     </div>
 
-                    <div>
-                        <a href="#contact" class="button button--flex">
-                            Send message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
+                    <div class="btnn">
+                        <input type="submit" name="submit" value="Send Message" class="btn">
                     </div>
                 </form>
             </div>

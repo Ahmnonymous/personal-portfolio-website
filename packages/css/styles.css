@@ -424,6 +424,20 @@ img {
   background-color: var(--first-color-alt);
 }
 
+
+.btn{
+  padding:1rem 4rem;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  transition: 0.3s;
+  background-color: var(--first-color);
+  color: #ffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-color: transparent;
+}
+
 .button__icon {
   font-size: 1.2rem;
   margin-left: var(--mb-0-5);
