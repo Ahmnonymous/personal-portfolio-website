@@ -1,0 +1,821 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+
+/* Custom Scroll Bar CSS */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+    background: #060008;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #060008;
+}
+/* navbar styling */
+nav{
+  position: fixed;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 998;
+  transition: all 0.3s ease;
+  font-family: 'Ubuntu', sans-serif;
+}
+nav.sticky{
+  background: #060008;
+  padding: 13px 0;
+}
+nav .navbar{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+nav .navbar .logo a{
+  font-weight: 500;
+  font-size: 35px;
+  color: #060008;
+}
+nav.sticky .navbar .logo .aesthetic-text .letter {
+  color: #fff !important;
+}
+
+
+nav .navbar .menu {
+  display: flex;
+  position: relative;
+}
+.nav .navbar .img1{
+  height: 1rem;
+  width: 2rem;
+}
+nav .navbar .menu li{
+  list-style: none;
+  margin: 0 8px;
+}
+.navbar .menu a{
+  font-size: 18px;
+  font-weight: 500;
+  color: #0E2431;
+  padding: 6px 0;
+  transition: all 0.4s ease;
+}
+.navbar .menu a:hover{
+  color: #bdb1c0d6;
+}
+nav.sticky .menu a{
+  color: #FFF;
+}
+nav.sticky .aesthetic-text {
+  color: #fff !important;
+  }
+nav.sticky .menu a:hover{
+  color:gray;
+}
+.navbar .media-icons a{
+  color: #060008;
+  font-size: 18px;
+  margin: 0 6px;
+}
+nav.sticky .media-icons a{
+  color: #FFF;
+}
+
+/* Side Navigation Menu Button CSS */
+nav .menu-btn,
+.navbar .menu .cancel-btn{
+  position: absolute;
+  color: #fff;
+  right: 30px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none;
+}
+nav .menu-btn{
+  color: #060008;
+}
+nav.sticky .menu-btn{
+  color: #FFF;
+}
+.navbar .menu .menu-btn{
+  color: #fff;
+}
+
+/* home section styling */
+.home{
+  /* height: 100vh;
+  width: 100%;
+  background: url("../images/images-ab1.png") no-repeat; */
+  background-size: contain;
+  background-position:right;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+
+}
+.home {
+  background-image: url("/../images/images-ab1.png"); /* Replace with the path to your image */
+  background-size: contain; /* Adjust to cover the entire section */
+  background-position: right; /* Center the image horizontally and vertically */
+  background-repeat: no-repeat; /* Prevent image from repeating */
+  height: 100vh;
+  width: 100%; /* Set the desired height for your section */
+  /* Additional styling as needed */
+}
+
+.home .home-content{
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .text-one{
+  font-size: 23px;
+  color: #0E2431;
+  margin-left: 3px;
+  
+}
+.home .text-two{
+  color: #0E2431;
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: 3px;
+}
+.home .text-three{
+  font-size: 40px;
+
+  color: #060008;
+  margin-left: 3px;
+}
+.home .text-four{
+  font-size: 23px;
+  margin-left: 3px;
+  color: #0E2431;
+}
+
+/* About Section Styling */
+/* Those Elements Where We Have Apply Same CSS,
+ I'm Selecting Directly 'Section Tag' and 'Class'  */
+section{
+  padding-top: 40px;
+}
+.topic img{
+  height: 4rem;
+}
+section .content{
+  width: 80%;
+  margin: 40px auto;
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about-details .left img{
+padding-bottom: 6rem;
+}
+
+section .title{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+section .title span{
+  color: #0E2431;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 8px;
+}
+section .title span::before,
+section .title span::after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #060008;
+  left: 0;
+  bottom: 0;
+}
+section .title span::after{
+  bottom: -7px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.about .about-details .left{
+  width: 45%;
+}
+.about .left img{
+  height: 700x;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.about-details .right{
+  width: 55%;
+}
+.about-details .right .topic img{
+  height: 3rem;
+  width: 3rem;
+}
+.about-details .content .title img{
+  height: 3rem;
+  width: 3rem;
+}
+section  .topic{
+  color: #0E2431;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.about-details .right p{
+  text-align: justify;
+  color: #0E2431;
+}
+section .button{
+  margin: 16px 0;
+}
+
+ /* My Skills CSS */
+ .skills{
+   background: #ffffff;
+ }
+ .skills .content{
+   padding: 40px 0;
+ }
+
+ .skills .skills-details{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .skills-details .text{
+   width: 50%;
+ }
+ .skills-details p{
+   color: #0E2431;
+   text-align: justify;
+ }
+ h1{
+  color: #0E2431;
+ }
+.skills .skills-details .experience{
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+}
+.skills-details .experience .num{
+  color: #0E2431;
+  font-size: 80px;
+}
+.skills-details .experience .exp{
+  color: #0E2431;
+  margin-left: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 6px;
+}
+.skills-details .boxes{
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.skills-details .box{
+  width: calc(100% / 2 - 20px);
+  margin: 20px 0;
+}
+.skills-details .boxes .topic{
+  font-size: 20px;
+  color: #060008;
+}
+.skills-details .boxes .per{
+  font-size: 60px;
+  color: #060008;
+}
+
+/* My Services CSS */
+.services .boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.services .boxes .box{
+  margin: 20px 0;
+  width: calc(100% / 3 - 20px);
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  cursor: default;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover{
+  background: #060008;
+  color: #ffffff;
+}
+.services .boxes .box .icon{
+  height: 50px;
+  width: 50px;
+  background: #060008;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  color: #ffffff;
+  margin: 0 auto 10px auto;
+  transition: all 0.4s ease;
+}
+.boxes .box:hover .icon{
+  background-color: #ffffff;
+  color: #060008;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #0E2431;
+  transition: all 0.4s ease;
+}
+.services .boxes .box:hover .topic,
+.services .boxes .box:hover p{
+  color: #ffffff;
+}
+/* Contact Me CSS */
+.contact{
+  background: #ffffff;
+}
+.contact .content{
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.contact .content img{
+  height: 8rem;
+  width: 8rem;
+}
+.contact .text{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+}
+.aesthetic-text .letter img{
+  height: 2rem;
+}
+
+/* Footer CSS */
+footer{
+  background: #000000;
+  padding: 15px 0;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+footer .text span{
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+}
+footer .text span a{
+  font-weight: 500;
+  color: #FFF;
+}
+footer .text span a:hover{
+  text-decoration: underline;
+}
+/* Scroll TO Top Button CSS */
+.scroll-button a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background: #0c0c0c;
+  padding: 7px 12px;;
+  font-size: 18px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+/* Responsive Media Query */
+@media (max-width: 1190px) {
+  section .content{
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .about .about-details{
+    justify-content: center;
+    flex-direction: column;
+  }
+  .about .about-details .left{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-details .right{
+    width: 90%;
+    margin: 40px 0;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: calc(100% / 2 - 20px);
+  }
+}
+@media (max-width: 900px) {
+  .about .left img{
+    height: 450px;
+    width: 350px;
+
+  }
+  .about-details .right p{
+    margin-top: -6rem;
+  }
+  
+}
+
+@media (max-width: 750px) {
+  nav .navbar{
+    width: 90%;
+  }
+  .home {
+    background-image: url("/../images/images-ab1.png"); /* Replace with the path to your image */
+    background-size: contain; /* Adjust to cover the entire section */
+    background-position: center top 25%; /* Center horizontally, and crop 25% from the top */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+    height: 80vh;
+    width: 100%; /* Set the desired width for your section */
+    /* Additional styling as needed */
+  }
+
+  
+  nav .navbar .menu{
+    position: fixed;
+    left: -100%;
+    top: 0;
+    background: #0E2431;
+    height: 100vh;
+    max-width: 400px;
+    width: 100%;
+    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  .navbar.active .menu{
+    left: 0;
+  }
+  nav .navbar .menu a{
+    font-size: 23px;
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+  }
+  nav.sticky .menu a:hover{
+    color: #0e2431ab;
+  }
+  nav .navbar .media-icons{
+    display: none;
+  }
+  nav .menu-btn,
+  .navbar .menu .cancel-btn{
+    display: block;
+  }
+  .home .text-one{
+    font-size: 30px;
+    margin-top: 11rem;
+  }
+  .home-content .text .text-two{
+    font-size: 53px;
+    
+   
+  }
+  .home-content .text .text-three{
+    font-size: 26px;
+    
+   
+  }
+
+  .skills .skills-details{
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .skills-details .text{
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .skills-details .boxes{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .services .boxes .box{
+    margin: 20px 0;
+    width: 100%;
+  }
+  .contact .text{
+    width: 100%;
+    
+}
+
+}
+
+@media (max-width: 500px){
+  .home .text-two{
+    font-size: 55px;
+  }
+  .home .text-three{
+    font-size: 33px;
+  }
+  .skills-details .boxes .per{
+    font-size: 50px;
+    color: #0E2431;
+  }
+}
+
+.button {
+  padding: 15px 20px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  z-index: 1;
+}
+
+.button::after,
+.button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #28282d;
+  border-radius: 10px;
+}
+
+.button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+} 
+.home-content {
+  position: relative;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.text {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  
+  padding: 20px; /* Adjust the padding as needed */
+}
+
+#confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .home-content {
+    align-items:self-start;
+    background: url("../images/images-ab1.png") no-repeat;
+  
+  }
+
+  .text {
+    text-align: left;
+    margin: 0; /* Remove both margin-right and margin-top */
+    padding: 20px; /* Keep your desired padding */
+  }
+
+  .text{
+    margin: 10px 0;
+    /* Add some vertical spacing between text elements */
+  }
+  .text-two .text-one{
+margin-top: 4rem;
+  }
+
+}
+
+
+
+
+/* Apply CSS styles to the aesthetic text */
+/* Apply CSS styles to the aesthetic text */
+.aesthetic-text {
+  font-family: 'Your-Font-Here', cursive; /* Use a suitable font family */
+  font-size: 24px; /* Adjust the font size */
+  color: black; /* Start with transparent text color */
+  display: inline-block;
+}
+
+
+
+/* Your existing CSS styles for larger screens */
+
+/* Add a media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+  #confetti-container {
+    height: 90vh; /* Adjust the height for mobile screens */
+  }
+  .aesthetic-text {
+    font-family: 'Your-Font-Here', cursive; /* Use a suitable font family */
+    font-size: 24px; /* Adjust the font size */
+    color: black; /* Start with transparent text color */
+    display: inline-block;
+  }
+}
+
+/* Add any additional styling you need for text and button */
+.image-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hover-images {
+  position: absolute;
+  display: none;
+  top: -30px; /* Adjust the top position to place images above the text */
+  left: 0;
+}
+
+.hover-images img {
+  width: 20px; /* Adjust the image width as needed */
+  height: 20px; /* Adjust the image height as needed */
+  margin-right: 5px; /* Adjust the spacing between images */
+}
+
+.image-hover:hover + .hover-images {
+  display: block;
+}
+.buttonl {
+  position: relative;
+  width: 130px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px #2867b2 solid;
+  overflow: hidden;
+}
+
+.text1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 22%;
+}
+
+.text2 {
+  position: absolute;
+  top: 25%;
+  left: -50px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+
+.icon1::before {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  z-index: -1;
+  content: '';
+  width: 130px;
+  height: 33px;
+  border-radius: 30px;
+  background-color: #2867b2;
+}
+
+.buttonl:hover .icon1 {
+  transform: translateX(96px);
+  transition: transform 0.5s;
+}
+
+.buttonl:hover .text2 {
+  transform: translateX(100px);
+  transition: transform 0.6s;
+}
+
+.buttonl:active {
+  transform: scale(1.03);
+}
+.text2 a{
+  color: white;
+}
+.Btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.svgContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  backdrop-filter: blur(0px);
+  letter-spacing: 0.8px;
+  border-radius: 10px;
+  transition: all .3s;
+  border: 1px solid rgba(156, 156, 156, 0.466);
+}
+
+.BG {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #181818;
+  z-index: -1;
+  border-radius: 10px;
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.Btn:hover .BG {
+  transform: rotate(35deg);
+  transform-origin: bottom;
+}
+
+.Btn:hover .svgContainer {
+  background-color: rgba(156, 156, 156, 0.466);
+  backdrop-filter: blur(4px);
+}
+.buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.button, .Btn, .buttonl {
+  margin: 5px; /* Add margin as needed */
+}
